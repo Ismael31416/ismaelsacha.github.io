@@ -369,70 +369,71 @@
       margin: 20px;
     }
   </style>
-  
-  <section class="bg-light" id="portfolio">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Portafolio</h2>
-          <h3 class="section-subheading text-muted">Un vistazo a los proyectos en los que he trabajado</h3>
-          <div id="portfolio-button-container">
-            <button class="btn btn-secondary active" data-portfolio-section="all">Todos</button>
-            <button class="btn btn-secondary" data-portfolio-section="optimization">Optimización</button>
-            <button class="btn btn-secondary" data-portfolio-section="ai-ml">IA & ML</button>
-            <button class="btn btn-secondary" data-portfolio-section="publications">Publicaciones</button>
-            <button class="btn btn-secondary" data-portfolio-section="dashboards">Dashboards</button>
-            <button class="btn btn-secondary" data-portfolio-section="automation">Automatización</button>
-          </div>
-          <br>
+  <!-- ======================== PORTFOLIO SECTION ============================ -->
+<section class="bg-light" id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">Portafolio</h2>
+        <h3 class="section-subheading text-muted">Un vistazo a los proyectos en los que he trabajado</h3>
+        <div id="portfolio-button-container">
+          <button class="btn btn-secondary active" data-portfolio-section="all">Todos</button>
+          <button class="btn btn-secondary" data-portfolio-section="optimization">Optimización</button>
+          <button class="btn btn-secondary" data-portfolio-section="ai-ml">IA & ML</button>
+          <button class="btn btn-secondary" data-portfolio-section="publications">Publicaciones</button>
+          <button class="btn btn-secondary" data-portfolio-section="dashboards">Dashboards</button>
+          <button class="btn btn-secondary" data-portfolio-section="automation">Automatización</button>
         </div>
-      </div>
-      <br><br>
-      <div id="portfolio-items" class="row">
-  
-        <div class="col-md-3 col-sm-6 portfolio-item show column ai-ml dashboards publications">
-          <a class="portfolio-link" data-toggle="modal" href="index.html#ukbGeoApp">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <p>Genética en el Reino Unido</p>
-                <hr>
-                <p class="explanation_portfolio">Evaluación de la distribución geográfica de rasgos genéticos<br></p>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/UKB_geo.png" alt="">
-          </a>
-        </div>
-  
-        <div class="col-md-3 col-sm-6 portfolio-item show column dashboards automation">
-          <a class="portfolio-link" data-toggle="modal" href="index.html#terresInovia">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <p>Dashboard para Terres Inovia</p>
-                <hr>
-                <p class="explanation_portfolio">Un panel para acceder rápidamente a la base de datos de <i>Terres Inovia</i></p>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/TI4.png" alt="">
-          </a>
-        </div>
-  
-        <div class="col-md-3 col-sm-6 portfolio-item show column ai-ml optimization">
-          <a class="portfolio-link" data-toggle="modal" href="index.html#greenTech">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <p>Desafío GreenTech</p>
-                <hr>
-                <p class="explanation_portfolio">Un reto de visualización de datos sobre la contaminación del agua en Francia. Tercer lugar en el <i>GreenTech Challenge</i>.</p>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/GreenTech.png" alt="">
-          </a>
-        </div>
-  
+        <br>
       </div>
     </div>
-  </section>
-  
+    <br><br>
+    <div id="portfolio-items" class="row">
+      <!-- Proyecto 1: UKB Geo -->
+      <div class="col-md-3 col-sm-6 portfolio-item show column ai-ml dashboards publications">
+        <a class="portfolio-link" data-toggle="modal" href="#ukbGeoApp">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <p>Genética en el Reino Unido</p>
+              <hr>
+              <p class="explanation_portfolio">Evaluación de la distribución geográfica de rasgos genéticos</p>
+            </div>
+          </div>
+          <img class="img-fluid" src="img/portfolio/UKB_geo.png" alt="">
+        </a>
+      </div>
+
+      <!-- Proyecto 2: Dashboard para Terres Inovia -->
+      <div class="col-md-3 col-sm-6 portfolio-item show column dashboards automation">
+        <a class="portfolio-link" data-toggle="modal" href="#terresInovia">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <p>Dashboard para Terres Inovia</p>
+              <hr>
+              <p class="explanation_portfolio">Un panel para acceder rápidamente a la base de datos de Terres Inovia</p>
+            </div>
+          </div>
+          <img class="img-fluid" src="img/portfolio/TI4.png" alt="">
+        </a>
+      </div>
+
+      <!-- Proyecto 3: Desafío GreenTech -->
+      <div class="col-md-3 col-sm-6 portfolio-item show column ai-ml optimization">
+        <a class="portfolio-link" data-toggle="modal" href="#greenTech">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <p>Desafío GreenTech</p>
+              <hr>
+              <p class="explanation_portfolio">Un reto de visualización de datos sobre la contaminación del agua en Francia. Tercer lugar en el GreenTech Challenge.</p>
+            </div>
+          </div>
+          <img class="img-fluid" src="img/portfolio/GreenTech.png" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
   <!-- ======================================================================= -->
