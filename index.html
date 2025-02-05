@@ -33,9 +33,9 @@
 /* Para dispositivos con resolución de pantalla similar a 1080x2400 px */
 @media (max-width: 480px) {
   .portfolio-modal .modal-dialog {
-    width: 95%; /* En pantallas pequeñas, el modal ocupará un 95% del ancho */
-    top: 50%; /* Mantener centrado verticalmente */
-    left: 50%; /* Mantener centrado horizontalmente */
+    width: 90%; /* En pantallas pequeñas, el modal ocupará un 95% del ancho */
+    top: 0%; /* Mantener centrado verticalmente */
+    left: 10%; /* Mantener centrado horizontalmente */
     transform: translate(-50%, -50%); /* Mantener la alineación centrada */
   }
 }
@@ -45,21 +45,12 @@
 @media (min-width: 481px) and (max-width: 767px) {
   .portfolio-modal .modal-dialog {
     width: 80%; /* En tabletas, el modal ocupará un 80% del ancho */
-    top: 50%; /* Mantener centrado verticalmente */
-    left: 50%; /* Mantener centrado horizontalmente */
+    top: 0%; /* Mantener centrado verticalmente */
+    left: 20%; /* Mantener centrado horizontalmente */
     transform: translate(-50%, -50%); /* Mantener la alineación centrada */
   }
 }
 
-/* Para pantallas más grandes (escritorios) */
-@media (min-width: 768px) {
-  .portfolio-modal .modal-dialog {
-    width: 60%; /* En pantallas más grandes, el modal ocupará un 60% del ancho */
-    top: 50%; /* Mantener centrado verticalmente */
-    left: 50%; /* Mantener centrado horizontalmente */
-    transform: translate(-50%, -50%); /* Mantener la alineación centrada */
-  }
-}
 
 .portfolio-modal .modal-content {
   padding: 30px 0;
