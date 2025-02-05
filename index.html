@@ -14,6 +14,64 @@
     
       <meta charset="utf-8">
       <title>Ismael Sacha | Analista de Datos - Desarrollador Web</title>
+      <style>
+        /* Estilos para los modales del portfolio */
+.portfolio-modal {
+  padding-right: 0 !important;
+}
+
+.portfolio-modal .modal-dialog {
+  margin: 3rem auto;
+  max-width: 800px;
+  width: 95%;
+}
+
+.portfolio-modal .modal-content {
+  padding: 30px 0;
+  text-align: center;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.portfolio-modal .modal-body {
+  padding: 2rem 4rem;
+}
+
+.portfolio-modal .close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.portfolio-modal .close-modal:hover {
+  opacity: 0.7;
+}
+
+.portfolio-modal .close-modal .lr {
+  height: 40px;
+  width: 1px;
+  margin-left: 20px;
+  background-color: #212529;
+  transform: rotate(45deg);
+  z-index: 1051;
+}
+
+.portfolio-modal .close-modal .lr .rl {
+  height: 40px;
+  width: 1px;
+  background-color: #212529;
+  transform: rotate(90deg);
+  z-index: 1052;
+}
+    </style>
+
+
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description"
         content="Bienvenido a la página de Ismael Sacha. Soy un ingeniero industrial con más de 7 años de experiencia en análisis de datos, automatización y desarrollo web en instituciones públicas y privadas.">
@@ -51,6 +109,8 @@
       <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
+
+        
     
     </head>
     
@@ -367,72 +427,78 @@
     .explanation_portfolio {
       font-size: 14px;
       margin: 20px;
+
+
+      
     }
+
+    
   </style>
   <!-- ======================== PORTFOLIO SECTION ============================ -->
-<section class="bg-light" id="portfolio">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">Portafolio</h2>
-        <h3 class="section-subheading text-muted">Un vistazo a los proyectos en los que he trabajado</h3>
-        <div id="portfolio-button-container">
-          <button class="btn btn-secondary active" data-portfolio-section="all">Todos</button>
-          <button class="btn btn-secondary" data-portfolio-section="optimization">Optimización</button>
-          <button class="btn btn-secondary" data-portfolio-section="ai-ml">IA & ML</button>
-          <button class="btn btn-secondary" data-portfolio-section="publications">Publicaciones</button>
-          <button class="btn btn-secondary" data-portfolio-section="dashboards">Dashboards</button>
-          <button class="btn btn-secondary" data-portfolio-section="automation">Automatización</button>
+
+  <section class="bg-light" id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Portafolio</h2>
+          <h3 class="section-subheading text-muted">Un vistazo a los proyectos en los que he trabajado</h3>
+          <div id="portfolio-button-container">
+            <button class="btn btn-secondary active" data-portfolio-section="all">Todos</button>
+            <button class="btn btn-secondary" data-portfolio-section="optimization">Optimización</button>
+            <button class="btn btn-secondary" data-portfolio-section="ai-ml">IA & ML</button>
+            <button class="btn btn-secondary" data-portfolio-section="publications">Publicaciones</button>
+            <button class="btn btn-secondary" data-portfolio-section="dashboards">Dashboards</button>
+            <button class="btn btn-secondary" data-portfolio-section="automation">Automatización</button>
+          </div>
+          <br>
         </div>
-        <br>
+      </div>
+      <br><br>
+      <div id="portfolio-items" class="row">
+  
+        <div class="col-md-3 col-sm-6 portfolio-item show column ai-ml dashboards publications">
+          <a class="portfolio-link" data-toggle="modal" data-target="#ukbGeoApp">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <p>Genética en el Reino Unido</p>
+                <hr>
+                <p class="explanation_portfolio">Evaluación de la distribución geográfica de rasgos genéticos<br></p>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/UKB_geo.png" alt="">
+          </a>
+        </div>
+  
+        <div class="col-md-3 col-sm-6 portfolio-item show column dashboards automation">
+          <a class="portfolio-link" data-toggle="modal" data-target="#terresInovia">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <p>Dashboard para Terres Inovia</p>
+                <hr>
+                <p class="explanation_portfolio">Un panel para acceder rápidamente a la base de datos de <i>Terres Inovia</i></p>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/TI4.png" alt="">
+          </a>
+        </div>
+  
+        <div class="col-md-3 col-sm-6 portfolio-item show column ai-ml optimization">
+          <a class="portfolio-link" data-toggle="modal" data-target="#greenTech">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <p>Desafío GreenTech</p>
+                <hr>
+                <p class="explanation_portfolio">Un reto de visualización de datos sobre la contaminación del agua en Francia. Tercer lugar en el <i>GreenTech Challenge</i>.</p>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/GreenTech.png" alt="">
+          </a>
+        </div>
+  
       </div>
     </div>
-    <br><br>
-    <div id="portfolio-items" class="row">
-      <!-- Proyecto 1: UKB Geo -->
-      <div class="col-md-3 col-sm-6 portfolio-item show column ai-ml dashboards publications">
-        <a class="portfolio-link" data-toggle="modal" href="#ukbGeoApp">
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <p>Genética en el Reino Unido</p>
-              <hr>
-              <p class="explanation_portfolio">Evaluación de la distribución geográfica de rasgos genéticos</p>
-            </div>
-          </div>
-          <img class="img-fluid" src="img/portfolio/UKB_geo.png" alt="">
-        </a>
-      </div>
-
-      <!-- Proyecto 2: Dashboard para Terres Inovia -->
-      <div class="col-md-3 col-sm-6 portfolio-item show column dashboards automation">
-        <a class="portfolio-link" data-toggle="modal" href="#terresInovia">
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <p>Dashboard para Terres Inovia</p>
-              <hr>
-              <p class="explanation_portfolio">Un panel para acceder rápidamente a la base de datos de Terres Inovia</p>
-            </div>
-          </div>
-          <img class="img-fluid" src="img/portfolio/TI4.png" alt="">
-        </a>
-      </div>
-
-      <!-- Proyecto 3: Desafío GreenTech -->
-      <div class="col-md-3 col-sm-6 portfolio-item show column ai-ml optimization">
-        <a class="portfolio-link" data-toggle="modal" href="#greenTech">
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <p>Desafío GreenTech</p>
-              <hr>
-              <p class="explanation_portfolio">Un reto de visualización de datos sobre la contaminación del agua en Francia. Tercer lugar en el GreenTech Challenge.</p>
-            </div>
-          </div>
-          <img class="img-fluid" src="img/portfolio/GreenTech.png" alt="">
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+  
 
 
 
@@ -572,56 +638,70 @@
 
 
   <!-- =================== MODAL SECTION ===================================== -->
+<!-- =================== MODAL SECTION ===================================== -->
 
-<!-- UKB Geo Application Modal -->
-<div class="portfolio-modal modal fade" id="ukbGeoApp" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog h-100">
+<!-- UKB geo application -->
+ <div class="portfolio-modal modal fade" id="ukbGeoApp" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="close-modal" data-dismiss="modal">
         <div class="lr">
           <div class="rl"></div>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <div class="modal-body">
-              <img src="img/portfolio/UKB_geo.png" width="180px" />
-              <h4>Geographical distribution of genetic traits.</h4>
-              <p>A web application allowing to visualize the geographical distribution of ~200 genetic related traits in the UK.</p>
-              <a class="btn btn-secondary text-uppercase" href="https://holtzyan.shinyapps.io/UKB_geo/">Online app</a>
-              <br><br>
-              <h6>Description</h6>
-              <hr>
-              <p>A group of researchers from the <a href="https://imb.uq.edu.au">Institute of Molecular Bioscience</a> investigated...</p>
-            </div>
-          </div>
+
+      <div class="modal-body">
+
+        <img src="img/portfolio/UKB_geo.png" width="180px" alt="UKB Geo"></img>
+        <h4>Geographical distribution of genetic traits.</h4>
+        <p style="max-width: 600px">A web application allowing to visualize the geographical distribution of ~200 genetic related traits in the UK.</p>
+        <a style="margin-top: 0px" class="btn btn-secondary btn text-uppercase js-scroll-trigger" href="https://holtzyan.shinyapps.io/UKB_geo/">Online app</a>
+        <br><br>
+        <div style="text-align: left">
+          <h6>Description</h6>
+          <hr>
+          <p>A group of researchers from the <a href="https://imb.uq.edu.au">Institute of Molecular Bioscience</a> investigated the geographic clustering of genetic variants that influence complex traits and disease risk in a sample of ~450,000 individuals from Great Britain.</p>
+          <p>I built a web application that supports the paper entitled <a href="https://www.biorxiv.org/content/early/2018/10/30/457515">Genetic Consequences of Social Stratification in Great Britain</a>.</p>
+          <img src="img/portfolio/ukbGeoDemo.png" width="100%" alt="UKB Geo Demo"></img>
+          <p>The <a href="https://holtzyan.shinyapps.io/UKB_geo/">shiny application</a> allows to visualize the geographic distribution of any trait...</p>
+          <h6>Read more</h6>
+          <hr>
+          <span>The web application is available <a href="https://holtzyan.shinyapps.io/UKB_geo/">online</a>. You can read the scientific paper on <a href="https://www.biorxiv.org/content/early/2018/10/30/457515">BioArXiv</a>. The source code is on <a href="https://github.com/holtzy/UKB_geo_application">Github</a>.</span>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Terres Inovia Modal -->
+<!-- Terres Inovia -->
 <div class="portfolio-modal modal fade" id="terresInovia" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog h-100">
+  <div class="modal-dialog modal-dialog-centered h-100">
     <div class="modal-content">
       <div class="close-modal" data-dismiss="modal">
         <div class="lr">
-          <div class="rl"></div>
+          <div class="rl" style="width: 18px; height: 18px;">
+            <div class="rl" style="width: 18px; height: 2px; background-color: #000;"></div> <!-- Horizontal -->
+            <div class="rl" style="width: 2px; height: 18px; background-color: #000;"></div> <!-- Vertical -->
+          </div>
         </div>
       </div>
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <div class="modal-body">
-              <img src="img/portfolio/TI4.png" width="180px" />
-              <h4>Dashboard for Terres Inovia</h4>
-              <p>Creation of a dashboard to explore the database of a private company.</p>
+              <img src="img/portfolio/TI4.png" width="180px"></img>
+              <h4>Dashboard for <i>Terres Inovia</i></h4>
+              <p style="max-width: 600px">Creation of a dashboard to explore the database of a private company.</p>
               <br><br>
-              <h6>Description</h6>
-              <hr>
-              <p><a href="http://www.terresinovia.fr">Terres Inovia</a> is a French company...</p>
+              <div style="text-align: left">
+                <h6>Description</h6>
+                <hr>
+                <p><a href="http://www.terresinovia.fr">Terres Inovia</a> is a French company...</p>
+                <center><img src="img/portfolio/TI1.png" width="80%"></img></center>
+                <h6>Read more</h6>
+                <hr>
+                <span>I can't provide more information on this project for privacy reasons.</span>
+              </div>
             </div>
           </div>
         </div>
@@ -630,27 +710,36 @@
   </div>
 </div>
 
-<!-- GreenTech Modal -->
+<!-- Greentech -->
 <div class="portfolio-modal modal fade" id="greenTech" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog h-100">
+  <div class="modal-dialog modal-dialog-centered h-100">
     <div class="modal-content">
       <div class="close-modal" data-dismiss="modal">
         <div class="lr">
-          <div class="rl"></div>
+          <div class="rl" style="width: 18px; height: 18px;">
+            <div class="rl" style="width: 18px; height: 2px; background-color: #000;"></div> <!-- Horizontal -->
+            <div class="rl" style="width: 2px; height: 18px; background-color: #000;"></div> <!-- Vertical -->
+          </div>
         </div>
       </div>
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <div class="modal-body">
-              <img src="img/portfolio/GreenTech.png" width="180px" />
+              <img src="img/portfolio/GreenTech.png" width="180px"></img>
               <h4>The Greentech challenge</h4>
-              <p>Studying water pollution for the French Ministry of environment.</p>
-              <p><i>Third prize for this dataviz competition.</i></p>
+              <p style="max-width: 600px">Studying water pollution for the French Ministry of environment.</p>
+              <p style="max-width: 600px"><i>Third prize for this data visualization competition.</i></p>
               <br><br>
-              <h6>Description</h6>
-              <hr>
-              <p>The GreenTech challenge is a Dataviz competition launched by the French Ministry...</p>
+              <div style="text-align: left">
+                <h6>Description</h6>
+                <hr>
+                <p>This was my entry to the GreenTech Challenge in 2017. It consisted of...</p>
+                <center><img src="img/portfolio/greenTechDemo.png" width="80%"></img></center>
+                <h6>Read more</h6>
+                <hr>
+                <span>You can view the project details in <a href="https://greentech-challenge.com">the official website</a>.</span>
+              </div>
             </div>
           </div>
         </div>
@@ -695,13 +784,13 @@
   <script src="https://d3js.org/d3.v4.min.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-3"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254649-3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
-    gtag('config', 'UA-79254642-3');
+    gtag('config', 'UA-79254649-3');
   </script>
 
 
