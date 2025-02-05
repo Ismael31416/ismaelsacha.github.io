@@ -30,6 +30,21 @@
         transform: translate(-50%, -50%); /* Alinea el modal centrado en la pantalla */
 }
 
+
+/* Para dispositivos móviles */
+@media (max-width: 767px) {
+  .portfolio-modal .modal-dialog {
+    width: 95%; /* En móviles, el modal ocupará más espacio */
+  }
+}
+
+/* Para pantallas de escritorio */
+@media (min-width: 768px) {
+  .portfolio-modal .modal-dialog {
+    width: 50%; /* En pantallas grandes, el modal ocupará menos espacio */
+  }
+
+  
 .portfolio-modal .modal-content {
   padding: 30px 0;
   text-align: center;
