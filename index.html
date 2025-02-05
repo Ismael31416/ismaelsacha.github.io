@@ -23,7 +23,11 @@
 .portfolio-modal .modal-dialog {
   margin: 3rem auto;
   max-width: 800px;
-  width: 95%;
+  width: 50%;
+  position: fixed; /* Fija la posición del modal */
+        top: 0%; /* Coloca el modal al centro de la pantalla */
+        left: 25%; /* Centrado horizontal */
+        transform: translate(-50%, -50%); /* Alinea el modal centrado en la pantalla */
 }
 
 .portfolio-modal .modal-content {
@@ -749,7 +753,23 @@
 </div>
 
 
+<script>
+  // Obtener el modal y el botón de cierre
+  const modal = document.querySelector('.portfolio-modal');
+  const closeModalButton = document.querySelector('.close-modal');
 
+  // Escuchar el evento click sobre el botón de cierre
+  closeModalButton.addEventListener('click', function() {
+    // Ocultar el modal
+    modal.style.display = 'none';
+  });
+
+  // Si deseas mostrar el modal con un click en un botón o enlace, puedes agregar el siguiente código:
+  // const openModalButton = document.querySelector('.open-modal');
+  // openModalButton.addEventListener('click', function() {
+  //   modal.style.display = 'block';
+  // });
+</script>
 
 
 
