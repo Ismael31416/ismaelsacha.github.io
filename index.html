@@ -62,11 +62,45 @@
     <body id="page-top">
 
       <!-- Navigation -->
+      <style>
+        .navbar .container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      
+        .nav-left {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+      
+        .cv-icon {
+          width: 40px;
+          height: 40px;
+          transition: transform 0.2s ease;
+        }
+      
+        .cv-icon:hover {
+          transform: scale(1.1);
+        }
+      
+        .nav-link:hover {
+          color: inherit !important; /* No cambia el color del texto al pasar el mouse */
+        }
+      </style>
+      
       <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
         <div class="container">
-          <a class="js-scroll-trigger" href="index.html#page-top">
-            INICIO
-          </a>
+          <div class="nav-left">
+            <a class="js-scroll-trigger" href="index.html#page-top">INICIO</a>
+            <a href="PDF/CV%20MARIO%20ISMAEL%20ÑAHUI%20SACHA%20-%20SIN%20DOCUMENTAR.pdf" 
+               download>
+              <img src="img/all/cvicon.png" 
+                   alt="Descargar CV" 
+                   class="cv-icon">
+            </a>
+          </div>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -97,6 +131,9 @@
           </div>
         </div>
       </nav>
+      
+      
+      
     
       <!-- =======================  LANDING SECTION ======================= -->
     
@@ -132,11 +169,7 @@
           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="index.html#blog">Suscribirse</a>
           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="index.html#contact">Contacto</a>
         </div>
-        <div class="arrowlanding">
-          <a class="js-scroll-trigger" href="index.html#description">
-            <p style="font-size: 80px; color: #69b3a2">&#xfe40;</p>
-          </a>
-        </div>
+
       </header>
     
       <!-- scripts -->
